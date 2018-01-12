@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   // baseData: Observable<any[]>;
   // currentUser: AngularFireObject<any>;
   path: string;
-  user: object;
+  user: any;
   userobject: any;
 
   constructor(private db: AngularFireDatabase, private route: ActivatedRoute) {
