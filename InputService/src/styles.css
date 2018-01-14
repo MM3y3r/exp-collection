@@ -3,7 +3,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-  padding: 2em 23em;
+  padding: 2em;
   background: lightgray;
   font-family: "Roboto", sans-serif;
 }
