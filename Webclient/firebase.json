@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+    // "redirects": [
+    //   {
+    //     "source": "/home/:id*",
+    //     "destination": "https://expcollection-webclient.firebaseapp.com/home/:id*",
+    //     "type": 301
+    //   }
+    // ]
+  }
+}

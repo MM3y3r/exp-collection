@@ -2,7 +2,7 @@
 import { AngularFireModule } from 'angularfire2';
 import { Md5 } from 'ts-md5/dist/md5';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from './../environments/environment';
+import { environment } from './../../environments/environment';
 import {
   AngularFireDatabase,
   AngularFireList,
@@ -57,10 +57,10 @@ class User {
 }
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './creator.component.html',
+  styleUrls: ['./creator.component.scss']
 })
-export class AppComponent {
+export class CreatorComponent {
   slug: Int32Array | string;
   experienceInputName: string = '';
   experienceInputDuration: string = '';

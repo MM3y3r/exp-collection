@@ -24,6 +24,10 @@ import {
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ThankyouComponent } from './thankyou/thankyou.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { CreatorComponent } from './creator/creator.component';
+import { ModifierComponent } from './modifier/modifier.component';
 
 export class User {
   description = 'Your Title';
@@ -32,9 +36,25 @@ export class User {
   socialMedia = 'http://via.placeholder.com/350x150';
 }
 
+const appRoutes: Routes = [
+  { path: 'modifier', component: CreatorComponent },
+  { path: 'creator', component: CreatorComponent },
+  { path: 'thankyou', component: ThankyouComponent },
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  },
+  { path: '**', component: PagenotfoundComponent }
+];
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ThankyouComponent, PagenotfoundComponent, CreatorComponent, ModifierComponent],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -52,4 +72,4 @@ export class User {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

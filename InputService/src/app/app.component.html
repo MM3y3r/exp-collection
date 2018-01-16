@@ -1,60 +1,6 @@
-<!-- welcome card -->
-<div class="material-contact animate-in-card">
-  <h1>Generate your page by entering your data here!</h1>
-  <h2>View your new page under http://localhost:4200/home/{{UserID}}</h2>
-</div>
+<nav class="navigation">
+  <a class="navElement" routerLink="/creator" routerLinkActive="active">Experience Generator</a>
+  <a class="navElement" routerLink="/modifier" routerLinkActive="active">Modifier</a>
+</nav>
 
-<!-- welcome card -->
-<div class="material-contact animate-in-card">
-  <mat-form-field class="example-full-width">
-    <input (change)="onInputChange('name', $event.target.value)" id="name" matInput placeholder="Full name">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onInputChange('title', $event.target.value)" id="title" matInput placeholder="Job title">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onInputChange('description', $event.target.value)" id="description" matInput placeholder="Description">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onSocialInputChange('twitter', $event.target.value)" matInput placeholder="Twitter handle">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onSocialInputChange('github', $event.target.value)" matInput placeholder="GitHub profile URL">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onSocialInputChange('linkedin', $event.target.value)" matInput placeholder="Linkedin profile URL">
-  </mat-form-field>
-</div>
-
-<div class="material-contact animate-in-card">
-  <h1>Enter your experience here!</h1>
-  <mat-form-field class="example-full-width">
-    <input (change)="onExperienceInputChange('name', $event.target.value)" matInput id="expName" #expName placeholder="Company name"
-      [(ngModel)]="experienceInputName">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onExperienceInputChange('description', $event.target.value)" matInput id="expDescription" #expDescription
-      placeholder="Description" [(ngModel)]="experienceInputDescription">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input (change)="onExperienceInputChange('duration', $event.target.value)" matInput id="expDuration" #expDuration placeholder="Duration"
-      [(ngModel)]="experienceInputDuration">
-  </mat-form-field>
-  <!-- SAVE BUTTON -->
-  <button (click)="addExperienceToUserObject()" mat-raised-button color="primary">Add experience</button>
-</div>
-
-<div *ngFor="let experience of UserObject.experiences" mySpy class="experiences">
-  <div *ngIf="experienceValidation(experience);else noContent">
-    <div class="material-contact animate-in-card">
-      <h1>{{experience.name}}</h1>
-      <div>{{experience.description}}</div>
-      <div>{{experience.duration}}</div>
-    </div>
-  </div>
-  <ng-template #noContent></ng-template>
-</div>
-
-<div class="material-contact animate-in-card">
-  <button (click)="submitToFirebase()" mat-raised-button color="accent">Submit</button>
-</div>
+<router-outlet></router-outlet>
