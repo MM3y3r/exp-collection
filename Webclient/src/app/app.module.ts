@@ -7,7 +7,7 @@ import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCardModule,
@@ -58,7 +58,7 @@ const appRoutes: Routes = [
     AngularFireAuthModule,
     BrowserModule,
     HttpModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
     MatCardModule,
@@ -68,4 +68,4 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
