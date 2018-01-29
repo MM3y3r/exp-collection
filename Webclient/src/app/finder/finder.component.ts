@@ -41,7 +41,21 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./finder.component.scss']
 })
 export class FinderComponent implements OnInit {
-  constructor() {}
+
+  uniqueId: string;
+
+  constructor( private router: Router) {
+    this.uniqueId = '';
+  }
 
   ngOnInit() {}
+
+  onIdChange(value: string){
+    this.uniqueId = value;
+    console.log(value);
+  }
+
+  navigateToId(event){
+    this.router.navigateByUrl(`/home/${this.uniqueId}`);
+  }
 }
