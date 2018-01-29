@@ -21,20 +21,22 @@ import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ExperiencesComponent } from './experiences/experiences.component';
+import { FinderComponent } from './finder/finder.component';
 
 const appRoutes: Routes = [
+  { path: 'finder', component: FinderComponent },
   { path: 'home', component: HomeComponent },
   { path: 'home/:id', component: HomeComponent },
   { path: 'experiences', component: ExperiencesComponent },
   { path: 'experiences/:id', component: ExperiencesComponent },
+  // {
+  //   path: '',
+  //   redirectTo: '/home',
+  //   pathMatch: 'full'
+  // },
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
-    redirectTo: '/home',
+    redirectTo: '/finder',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
-    ExperiencesComponent
+    ExperiencesComponent,
+    FinderComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -68,4 +71,4 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
