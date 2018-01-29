@@ -25,9 +25,9 @@ import { FinderComponent } from './finder/finder.component';
 
 const appRoutes: Routes = [
   { path: 'finder', component: FinderComponent },
-  { path: 'home', component: HomeComponent },
+  // { path: 'home', component: HomeComponent },
   { path: 'home/:id', component: HomeComponent },
-  { path: 'experiences', component: ExperiencesComponent },
+  // { path: 'experiences', component: ExperiencesComponent },
   { path: 'experiences/:id', component: ExperiencesComponent },
   // {
   //   path: '',
@@ -36,6 +36,16 @@ const appRoutes: Routes = [
   // },
   {
     path: '',
+    redirectTo: '/finder',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    redirectTo: '/finder',
+    pathMatch: 'full'
+  },
+  {
+    path: 'experiences',
     redirectTo: '/finder',
     pathMatch: 'full'
   },
