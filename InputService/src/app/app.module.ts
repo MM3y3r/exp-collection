@@ -42,7 +42,7 @@ const appRoutes: Routes = [
   { path: 'thankyou', component: ThankyouComponent },
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/creator',
     pathMatch: 'full'
   },
   { path: '**', component: PagenotfoundComponent }
@@ -53,7 +53,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      // { enableTracing: true } // <-- debugging purposes only. Enable if logging is needed.
     ),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

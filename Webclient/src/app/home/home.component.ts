@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       response => {
         // console.log('Success Response: ' + JSON.stringify(response));
         this.user = response;
-        console.log('user: ' + this.user);
+        // console.log('user: ' + this.user);
       },
       error => {
         console.log('Error happened: ' + error);

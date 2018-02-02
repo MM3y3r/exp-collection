@@ -52,7 +52,7 @@ export class FinderComponent implements OnInit {
 
   onIdChange(value: string){
     this.uniqueId = value;
-    console.log(value);
+    // console.log(value);
   }
 
   navigateToId(){
