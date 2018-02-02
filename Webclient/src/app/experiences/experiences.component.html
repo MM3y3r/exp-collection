@@ -1,11 +1,13 @@
 <!-- the contact card -->
-<div *ngIf="user.experiences && user.experiences.length > 3">
+<div *ngIf="user.experiences && user.experiences.length > 0">
   <div *ngFor="let exp of user.experiences">
-    <div class="material-contact animate-in-card">
+    <div *ngIf="exp.name !== 'testUser'">
+      <div class="material-contact animate-in-card">
 
-      <h1 class="animate-in-01">{{ exp?.name }}</h1>
-      <h2 class="animate-in-01">{{ exp?.duration }}</h2>
-      <p class="animate-in-01">{{ exp?.description }}</p>
+        <h1 class="animate-in-01">{{ exp?.name }}</h1>
+        <h2 class="animate-in-01">{{ exp?.duration }}</h2>
+        <p class="animate-in-01">{{ exp?.description }}</p>
+      </div>
     </div>
   </div>
 </div>
