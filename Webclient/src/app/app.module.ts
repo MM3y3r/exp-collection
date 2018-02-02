@@ -22,6 +22,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RouterModule, Routes } from '@angular/router';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { FinderComponent } from './finder/finder.component';
+import { UploadComponent } from './upload/upload.component';
 
 const appRoutes: Routes = [
   { path: 'finder', component: FinderComponent },
@@ -59,7 +60,8 @@ const appRoutes: Routes = [
     AboutComponent,
     PageNotFoundComponent,
     ExperiencesComponent,
-    FinderComponent
+    FinderComponent,
+    UploadComponent
   ],
   imports: [
     RouterModule.forRoot(

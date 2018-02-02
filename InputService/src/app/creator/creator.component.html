@@ -19,10 +19,10 @@
     <input (change)="onSocialInputChange('twitter', $event.target.value)" matInput placeholder="Twitter handle">
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input (change)="onSocialInputChange('github', $event.target.value)" matInput placeholder="GitHub profile URL">
+    <input (change)="onSocialInputChange('github', $event.target.value)" matInput placeholder="GitHub profile id">
   </mat-form-field>
   <mat-form-field class="example-full-width">
-    <input (change)="onSocialInputChange('linkedin', $event.target.value)" matInput placeholder="Linkedin profile URL">
+    <input (change)="onSocialInputChange('linkedin', $event.target.value)" matInput placeholder="Linkedin profile id">
   </mat-form-field>
 </div>
 
@@ -48,8 +48,8 @@
   <div *ngIf="experienceValidation(experience);else noContent">
     <div class="material-contact animate-in-card">
       <h1>{{experience.name}}</h1>
+      <h2>{{experience.duration}}</h2>
       <div>{{experience.description}}</div>
-      <div>{{experience.duration}}</div>
     </div>
   </div>
   <ng-template #noContent></ng-template>
