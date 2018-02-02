@@ -55,7 +55,7 @@ export class FinderComponent implements OnInit {
     console.log(value);
   }
 
-  navigateToId(event){
+  navigateToId(){
     this.router.navigateByUrl(`/home/${this.uniqueId}`);
   }
 }
