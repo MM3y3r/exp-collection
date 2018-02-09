@@ -13,6 +13,7 @@ import {
   MatCardModule,
   MatMenuModule,
   MatToolbarModule,
+  MatInputModule,
   MatIconModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
@@ -75,6 +76,7 @@ const appRoutes: Routes = [
     HttpModule,
     // BrowserAnimationsModule,
     MatButtonModule,
+    MatInputModule,
     MatMenuModule,
     MatCardModule,
     MatToolbarModule,
@@ -83,4 +85,4 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
