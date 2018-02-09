@@ -182,6 +182,6 @@ export class CreatorComponent {
   submitToFirebase() {
     //TODO: implement custom key!!!
     this.users.set(this.UserID, this.UserObject).then(_ => console.log(`Data pushed to Firebase!`));
-    this.router.navigateByUrl('/thankyou')
+    this.router.navigate(['/thankyou', { id: this.UserID }])
   }
 }
